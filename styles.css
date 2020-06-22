@@ -1,26 +1,39 @@
 * {
   font-family: "Allerta", sans-serif;
-  color: #00000f;
 }
 * body {
+  background: #777777;
   display: flex;
   color: #160f0aec;
 }
 
+#front {
+  background: #fff;
+}
 #front #header {
-  top: 5%;
-  left: 5%;
+  position: relative;
   text-align: center;
-  position: absolute;
+  border-top-right-radius: 1em;
+  padding-left: 4px;
+  overflow: hidden;
 }
 #front #header h1 {
-  padding: 5%;
-  padding-bottom: 0;
+  padding: 2% 5%;
   margin: auto;
   text-align: left;
-  width: 80%;
   font-size: 2.6rem;
-  text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.3), 0px -1px 0px rgba(0, 0, 0, 0.7);
+  background: #4C85C5;
+  color: #fff;
+}
+#front #header h1:nth-of-type(1) {
+  background: #F15B1C;
+}
+#front #header h1:nth-of-type(2) {
+  background: #00000F;
+}
+#front #text .blurb {
+  padding: 10%;
+  text-align: center;
 }
 #front #explanation {
   position: absolute;
@@ -77,7 +90,7 @@
   box-shadow: inset 2px -1px 2px 4px rgba(5, 10, 50, 0.05), inset 3px -1px 1px 1px rgba(5, 10, 50, 0.3), -9px 0px 40px 9px rgba(0, 0, 0, 0.62), -20px -8px 40px 9px rgba(0, 0, 0, 0.05);
 }
 #book #front, #book #back {
-  background: url(assets/vintage-book-cover-textures-6.jpg);
+  background: #fff;
   background-size: cover;
 }
 #book #page1, #book #page2, #book #page3, #book #page4, #book #page5, #book #page6 {
