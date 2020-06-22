@@ -1,20 +1,19 @@
 $primaryBlue: #e2f8ffd5
 $mainText: #00000f
 $backgroundColor: #777777
-$bookCover: #fff
+$bookCover: url(Smiling-no-color.jpg)
+$titleText: #111d4a
 $red: #F15B1C
 $blue: #4C85C5
 $black: #00000F
-$mainFont: 'Allerta', sans-serif
+$nprFont: 'Allerta', sans-serif
+$textFont: 'Lato', sans-serif
 $headerSize: 1.5rem
 $bookHeight: 90vh
 $bookWidth: 33vw
 $breakpoint-mobile: 500px
 
 =border-radius($radius)
-    // -webkit-border-radius: $radius
-    // -ms-border-radius: $radius
-    // border-radius: $radius
     border-top-right-radius: $radius
     border-bottom-right-radius: $radius
 
@@ -22,7 +21,6 @@ $breakpoint-mobile: 500px
     box-shadow: 0 1em 3em 0 rgba(0, 0, 0, .12)
     
 *
-    font-family: $mainFont
     body
         background: $backgroundColor
         display: flex
@@ -33,14 +31,15 @@ $breakpoint-mobile: 500px
     #header
         position: relative
         text-align: center
-        border-top-right-radius: 1em
         padding-left: 4px
+        margin: 5%
         overflow: hidden
         h1
-            // top: 50%
-            // transform: translateY(-50%) translateX(-50%)
-            // left: 50%
-            padding: 2% 5%
+            font-family: $nprFont
+            float: left
+            padding: 1% 5%
+            padding-bottom: 3%
+            border: 1px white solid
             // padding-bottom: 0
             margin: auto
             text-align: left
@@ -51,72 +50,96 @@ $breakpoint-mobile: 500px
             // text-shadow: 0px 1px 0px rgba(255,255,255,.3), 0px -1px 0px rgba(0,0,0,.7)
         h1:nth-of-type(1)
             background: $red
+            border-right: none
         h1:nth-of-type(2)
             background: $black
+            border-left: none
+            border-right: none
+        h1:nth-of-type(3)
+            border-left: none
     #text
         .blurb
             padding: 10%
             text-align: center
-    #explanation
-        position: absolute
-        left: 10%
-        top: 35%
-    #wordInput
-        position: absolute
-        top: 30%
-        left: 10%
-        z-index: 999
-    input
-        background: unset
-        outline: none
-        border-color: #160f0aec
-        font-size: 1rem
-        width: 300px
-        border-top-style: hidden
-        border-right-style: hidden
-        border-left-style: hidden
-        border-bottom-style: groove
-    input::placeholder
-        color:#160f0aec
+            button
+                font-family: $textFont
+                display: flex
+                margin: 2% auto
+                justify-content: center
+                @include box-shadow
+                border: unset
+                border-radius: 5px
+                // box-shadow: 0px 1px 0px rgba(255,255,255,.3)
+                overflow: hidden
+            button:nth-of-type(1)
+                background: $titleText
+                color: white
+                padding: 5%
+    .title
+        padding: 20px
+        color: $titleText
+        text-align: center
+        h2 
+            font-family: $textFont
+            font-weight: 700
+            font-style: italic
+            font-size: 1.75rem
+        h3
+            font-family: $textFont
 
-    #footer
-        position: absolute
-        top:90%
-        padding-left: 5%
-        button
-            font-size: 1rem
-            background-color: unset
-            border: unset
-            color: unset
-            padding: 0px 20px
+
+    // #explanation
+    //     position: absolute
+    //     left: 10%
+    //     top: 35%
+    // #wordInput
+    //     position: absolute
+    //     top: 30%
+    //     left: 10%
+    //     z-index: 999
+    // input
+    //     background: unset
+    //     outline: none
+    //     border-color: #160f0aec
+    //     font-size: 1rem
+    //     width: 300px
+    //     border-top-style: hidden
+    //     border-right-style: hidden
+    //     border-left-style: hidden
+    //     border-bottom-style: groove
+    // input::placeholder
+    //     color:#160f0aec
+
+    // #footer
+    //     position: absolute
+    //     top:90%
+    //     padding-left: 5%
+    //     button
+    //         font-size: 1rem
+    //         background-color: unset
+    //         border: unset
+    //         color: unset
+    //         padding: 0px 20px
 
 #book
-    // display: flex
-    // left: 33%
     margin: auto
     top: 5vh
     justify-content: center
     transform-style: preserve-3d
     position: relative
-    // cursor: pointer
-    // backface-visibility: visible
     height: $bookHeight
+    max-height: 700px
     width: 400px
     +border-radius(1em)
     transition: transform 1s ease-in-out
-    // +box-shadow
     #front
         -webkit-box-shadow: inset 2px -1px 2px 4px rgba(5,10,50,.05), inset 3px -1px 1px 1px rgba(5,10,50,.3)
         box-shadow: inset 2px -1px 2px 4px rgba(5,10,50,.05), inset 3px -1px 1px 1px rgba(5,10,50,.3), -9px 0px 40px 9px rgba(0,0,0,0.62), -20px -8px 40px 9px rgba(0,0,0,0.05)
     #front, #back
-        // background: #e3dacc
-        // background: -webkit-linear-gradient(to right, #E9E4F0, #D3CCE3)
-        // background: linear-gradient(to right, #E9E4F0, #D3CCE3)
         background: $bookCover
         background-size: cover
 
     #page1, #page2, #page3, #page4, #page5, #page6
-        // background-color: #F9D8A7
         background: #ffffff
         background: linear-gradient(90deg, rgba(2,0,36,.4) 0%, rgba(255,255,255,1) 1%, rgba(255,255,255,1) 100%)
     >div
@@ -127,22 +150,17 @@ $breakpoint-mobile: 500px
         left: 0
         transform-origin: left center
         transition: transform .5s ease-in-out, box-shadow .35s ease-in-out, display .8s ease-in-out
-    // #page1, #page2, #page3, #page4, #page5, #page6
     >div
         height: 100%
         width: 100%
     #page6
         input
-            // background: purple
-            // outline: none
             color: #3d3d3de3
             font-size: 1rem
             position: relative
-            // top: 90%
             display: block
             left: 25%
             top: 40%
-            // width: 75%
             border: 1px
             // border-top-style: hidden
             // border-right-style: hidden
@@ -183,7 +201,6 @@ $breakpoint-mobile: 500px
 
 .moveRight
     transform: translateX(50%)
-    // left: 25%
 
 .title
     padding: 30px
