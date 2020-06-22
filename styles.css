@@ -50,12 +50,12 @@
   box-shadow: 0 1em 3em 0 rgba(0, 0, 0, 0.12);
   border: unset;
   border-radius: 5px;
+  color: white;
+  padding: 5%;
   overflow: hidden;
 }
 #front #text .blurb button:nth-of-type(1) {
   background: #111d4a;
-  color: white;
-  padding: 5%;
 }
 #front .title {
   padding: 20px;
