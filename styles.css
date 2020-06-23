@@ -79,7 +79,8 @@ p {
 #page5 div {
   padding: 5%;
 }
-#page5 div .page1 {
+
+.page1 {
   width: 100%;
   height: 100%;
   position: relative;
@@ -130,8 +131,6 @@ p {
 }
 #book #page6 .textContainer {
   padding: 5%;
-  display: flex;
-  flex-wrap: wrap;
 }
 #book #page6 .noWrap {
   flex-wrap: unset;
@@ -149,34 +148,68 @@ p {
   transform: rotateY(-180deg);
   box-shadow: 0 1em 3em 0 rgba(0, 0, 0, 0.12);
 }
-.poems #front #text {
-  display: none;
-}
 .poems #page1 {
-  transform: rotateY(-170deg);
+  transform: rotateY(-172deg);
   box-shadow: 0 1em 3em 0 rgba(0, 0, 0, 0.12);
 }
 .poems #page2 {
-  transform: rotateY(-10deg);
+  transform: rotateY(-8deg);
   box-shadow: 0 1em 3em 0 rgba(0, 0, 0, 0.12);
 }
 .poems #page3 {
-  transform: rotateY(-165deg);
+  transform: rotateY(-170deg);
   box-shadow: 0 1em 3em 0 rgba(0, 0, 0, 0.12);
 }
 .poems #page4 {
-  transform: rotateY(-15deg);
+  transform: rotateY(-10deg);
   box-shadow: 0 1em 3em 0 rgba(0, 0, 0, 0.12);
 }
 .poems #page5 {
-  transform: rotateY(-160deg);
+  transform: rotateY(-165deg);
   box-shadow: 0 1em 3em 0 rgba(0, 0, 0, 0.12);
 }
 .poems #page6 {
-  transform: rotateY(-20deg);
+  transform: rotateY(-15deg);
   box-shadow: 0 1em 3em 0 rgba(0, 0, 0, 0.12);
 }
 .poems #back {
+  transform: rotateY(0deg);
+  box-shadow: 0 1em 3em 0 rgba(0, 0, 0, 0.12);
+}
+
+.poemsFlip {
+  border-top-right-radius: 1em;
+  border-bottom-right-radius: 1em;
+}
+.poemsFlip #front {
+  transform: rotateY(-180deg);
+  box-shadow: 0 1em 3em 0 rgba(0, 0, 0, 0.12);
+}
+.poemsFlip #page1 {
+  transform: rotateY(-172deg);
+  box-shadow: 0 1em 3em 0 rgba(0, 0, 0, 0.12);
+}
+.poemsFlip #page2 {
+  transform: rotateY(-8deg);
+  box-shadow: 0 1em 3em 0 rgba(0, 0, 0, 0.12);
+}
+.poemsFlip #page3 {
+  transform: rotateY(-170deg);
+  box-shadow: 0 1em 3em 0 rgba(0, 0, 0, 0.12);
+}
+.poemsFlip #page4 {
+  transform: rotateY(-10deg);
+  box-shadow: 0 1em 3em 0 rgba(0, 0, 0, 0.12);
+}
+.poemsFlip #page5 {
+  transform: rotateY(-168deg);
+  box-shadow: 0 1em 3em 0 rgba(0, 0, 0, 0.12);
+}
+.poemsFlip #page6 {
+  transform: rotateY(-165deg);
+  box-shadow: 0 1em 3em 0 rgba(0, 0, 0, 0.12);
+}
+.poemsFlip #back {
   transform: rotateY(0deg);
   box-shadow: 0 1em 3em 0 rgba(0, 0, 0, 0.12);
 }
@@ -191,6 +224,14 @@ p {
 
 .haiku {
   padding-left: 30px;
+}
+
+.flex {
+  display: flex;
+}
+
+.notVisible {
+  display: none;
 }
 
 @media (max-width: 500px) {
