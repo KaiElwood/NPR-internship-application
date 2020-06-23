@@ -222,10 +222,6 @@ p {
   padding: 30px;
 }
 
-.haiku {
-  padding-left: 30px;
-}
-
 .flex {
   display: flex;
 }
@@ -240,8 +236,6 @@ p {
   }
 
   #book {
-    width: 100vw;
-    height: 100vh;
     padding: none;
     margin: none;
     top: 0;

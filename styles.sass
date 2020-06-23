@@ -101,73 +101,6 @@ p
     transform-style: preserve-3d
     margin-block-start: 0
 
-// $total-lines: 6
-// $left-offset: 29px
-// $clip-height: 50px
-// $line-height: $clip-height - 5px
-// // html 
-// //   background-color: #5138BE
-// //   height: 100%
-
-
-// // body 
-// //   color: #FFFFFF
-// //   display: flex
-
-// .Words 
-//     margin: 0 auto
-//     padding: 80px 0
-//     font-family: $textFont
-//     font-size: 68px
-//     font-weight: 900
-//     letter-spacing: -2px
-//     text-transform: uppercase
-//     transform: translate3d(0, 0, 0)
-//     -webkit-font-smoothing: antialiased
-//     -webkit-font-kerning: normal
-//     -webkit-text-size-adjust: 100%
-
-// .Words-line 
-//     height: $clip-height
-//     overflow: hidden
-//     position: relative
-  
-//     &:nth-child(odd) 
-//         transform: skew(60deg, -30deg) scaleY(.66667)
-  
-//     &:nth-child(even) 
-//         transform: skew(0deg, -30deg) scaleY(1.33333)
-  
-  
-//     @for $i from 1 through $total-lines+1 
-//         &:nth-child(#{$i}) 
-//             left: $left-offset * $i  
-//     p 
-//         height: $clip-height
-//         line-height: $line-height
-//         padding: 0 10px
-//         transition: all .4s ease-in-out
-//         transform: translate3d(0, 0, 0)
-//         vertical-align: top
-//         white-space: nowrap
-
-// .Words:hover 
-//     p 
-//         transform: translate3d(0, -($clip-height), 0)
-  
-
-
-    // #footer
-    //     position: absolute
-    //     top:90%
-    //     padding-left: 5%
-    //     button
-    //         font-size: 1rem
-    //         background-color: unset
-    //         border: unset
-    //         color: unset
-    //         padding: 0px 20px
-
 #book
     margin: auto
     top: 5vh
@@ -209,29 +142,14 @@ p
         .noWrap:first-child
             background: $red
             color: white
-        // input
-        //     color: #3d3d3de3
-        //     font-size: 1rem
-        //     position: relative
-        //     display: block
-        //     left: 25%
-        //     top: 40%
-        //     border: 1px
-            // border-top-style: hidden
-            // border-right-style: hidden
-            // border-left-style: hidden
-            // border-bottom-style: groove
 
 
 // only apply when button is pressed
 .poems
-    // justify-content: flex-end
     +border-radius(1em)
     #front
         transform: rotateY(-180deg)
         +box-shadow
-        // #text
-        //     display: none
     #page1
         transform: rotateY(-172deg)
         +box-shadow
@@ -289,9 +207,6 @@ p
 .title
     padding: 30px
 
-.haiku
-    padding-left: 30px
-
 .flex
     display: flex
 
@@ -305,11 +220,12 @@ p
         // height: 100vh
         // width: 100vw
     #book
-        width: 100vw
-        height: 100vh
+        // width: 100vw
+        // height: 100vh
         padding: none
         margin: none
         top: 0
+        // position: absolute
     .moveRight
         transform: none
     .poems
