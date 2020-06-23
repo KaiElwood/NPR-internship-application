@@ -72,6 +72,17 @@
   font-family: "Lato", sans-serif;
 }
 
+#page5 div {
+  padding: 5%;
+}
+#page5 div .page1 {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform: rotateY(180deg);
+  transform-style: preserve-3d;
+}
+
 #book {
   margin: auto;
   top: 5vh;

@@ -86,28 +86,71 @@ $breakpoint-mobile: 500px
         h3
             font-family: $textFont
 
+#page5
+    div
+        padding: 5%
+        .page1
+            width: 100%
+            height: 100%
+            position: relative
+            transform: rotateY(180deg)
+            transform-style: preserve-3d
 
-    // #explanation
-    //     position: absolute
-    //     left: 10%
-    //     top: 35%
-    // #wordInput
-    //     position: absolute
-    //     top: 30%
-    //     left: 10%
-    //     z-index: 999
-    // input
-    //     background: unset
-    //     outline: none
-    //     border-color: #160f0aec
-    //     font-size: 1rem
-    //     width: 300px
-    //     border-top-style: hidden
-    //     border-right-style: hidden
-    //     border-left-style: hidden
-    //     border-bottom-style: groove
-    // input::placeholder
-    //     color:#160f0aec
+// $total-lines: 6
+// $left-offset: 29px
+// $clip-height: 50px
+// $line-height: $clip-height - 5px
+// // html 
+// //   background-color: #5138BE
+// //   height: 100%
+
+
+// // body 
+// //   color: #FFFFFF
+// //   display: flex
+
+// .Words 
+//     margin: 0 auto
+//     padding: 80px 0
+//     font-family: $textFont
+//     font-size: 68px
+//     font-weight: 900
+//     letter-spacing: -2px
+//     text-transform: uppercase
+//     transform: translate3d(0, 0, 0)
+//     -webkit-font-smoothing: antialiased
+//     -webkit-font-kerning: normal
+//     -webkit-text-size-adjust: 100%
+
+// .Words-line 
+//     height: $clip-height
+//     overflow: hidden
+//     position: relative
+  
+//     &:nth-child(odd) 
+//         transform: skew(60deg, -30deg) scaleY(.66667)
+  
+//     &:nth-child(even) 
+//         transform: skew(0deg, -30deg) scaleY(1.33333)
+  
+  
+//     @for $i from 1 through $total-lines+1 
+//         &:nth-child(#{$i}) 
+//             left: $left-offset * $i  
+//     p 
+//         height: $clip-height
+//         line-height: $line-height
+//         padding: 0 10px
+//         transition: all .4s ease-in-out
+//         transform: translate3d(0, 0, 0)
+//         vertical-align: top
+//         white-space: nowrap
+
+// .Words:hover 
+//     p 
+//         transform: translate3d(0, -($clip-height), 0)
+  
+
 
     // #footer
     //     position: absolute
